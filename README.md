@@ -1,5 +1,10 @@
 # Hardline
 
+[![npm version](https://img.shields.io/npm/v/@hardline-ai/cli)](https://www.npmjs.com/package/@hardline-ai/cli)
+[![CI](https://github.com/singh38600-svg/hardline/actions/workflows/ci.yml/badge.svg)](https://github.com/singh38600-svg/hardline/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+
+
 > **Your AGENTS.md is a suggestion. Hardline makes it law.**
 
 Hardline finds mechanically enforceable rules inside `CLAUDE.md`, `AGENTS.md`, and `GEMINI.md`, converts them into a typed policy, and compiles native Claude Code hooks that block violations before they happen.
