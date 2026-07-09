@@ -1,0 +1,25 @@
+name: Bug report
+description: Report an incorrect decision, crash, or bypass
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Include the policy, hook input, and observed decision.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Minimal reproduction
+      description: Provide commands or a small repository fixture.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Hardline version
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Claude Code version

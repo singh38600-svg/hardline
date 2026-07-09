@@ -1,0 +1,8 @@
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+.hardline/state.json
+.hardline/events.jsonl
+.claude/settings.local.json

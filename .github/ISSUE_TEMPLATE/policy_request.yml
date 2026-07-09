@@ -1,0 +1,22 @@
+name: Policy request
+description: Propose a mechanically enforceable agent rule
+title: "[Policy]: "
+labels: [enhancement, policy]
+body:
+  - type: textarea
+    attributes:
+      label: The soft instruction
+      description: Show the exact sentence developers currently put in an agent instruction file.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: The attempted violation
+      description: Show a concrete tool input that should be denied or require approval.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected deterministic rule
+    validations:
+      required: true

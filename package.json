@@ -1,0 +1,61 @@
+{
+  "name": "@hardline-ai/cli",
+  "version": "0.1.0",
+  "description": "Turn soft AI-agent instructions into hard runtime rules.",
+  "type": "module",
+  "bin": {
+    "hardline": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run build && npm test",
+    "prepublishOnly": "npm run check",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "claude-code",
+    "ai-agents",
+    "hooks",
+    "guardrails",
+    "developer-tools",
+    "policy-as-code"
+  ],
+  "author": "Hardline contributors",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "commander": "^14.0.0",
+    "minimatch": "^10.0.3",
+    "picocolors": "^1.1.1",
+    "yaml": "^2.8.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singh38600-svg/hardline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/singh38600-svg/hardline/issues"
+  },
+  "homepage": "https://github.com/singh38600-svg/hardline#readme"
+}

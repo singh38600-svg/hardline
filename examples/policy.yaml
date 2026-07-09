@@ -1,0 +1,30 @@
+version: 1
+policies:
+  - id: protect-env
+    description: Never modify environment files.
+    type: file.write
+    mode: deny
+    paths:
+      - .env*
+  - id: use-pnpm
+    description: This repository uses pnpm.
+    type: command.run
+    mode: deny
+    effect: deny
+    patterns:
+      - '(?:^|[;&|]\s*)npm\s+(?:i|install)\b'
+    replacement: pnpm add <package>
+    testCommands:
+      - npm install zod
+  - id: approve-dependencies
+    description: Dependency changes require a human decision.
+    type: dependency.change
+    mode: deny
+    effect: require_approval
+  - id: verified-completion
+    description: Tests must be fresh before completion.
+    type: session.stop
+    mode: deny
+    require:
+      - command: pnpm test
+        freshAfter: last_write
