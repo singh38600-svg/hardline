@@ -21,27 +21,23 @@ Your instructions say:
 
 A probabilistic model can still ignore every line. Anything deterministic should not be entrusted to a prompt.
 
-## Install from source
+## Quick start
 
-Until the first npm release:
-
-```bash
-git clone https://github.com/singh38600-svg/hardline.git
-cd hardline
-npm install
-npm run build
-npm link
-```
-
-Then, inside a target repository:
+Run Hardline inside any project:
 
 ```bash
-hardline init
-# Review .hardline/policy.draft.yaml, then:
-npx hardline init --accept
-npx hardline compile --target claude
-npx hardline test
+npx @hardline-ai/cli init
 ```
+
+Review the generated policy, then activate it:
+
+```bash
+npx @hardline-ai/cli init --accept
+npx @hardline-ai/cli compile --target claude
+npx @hardline-ai/cli test
+```
+
+No global installation or API key is required.
 
 ## See it work
 
